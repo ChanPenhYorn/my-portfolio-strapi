@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_text_comp_text_comps",
+  "info": {
+    "displayName": "text-comp"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

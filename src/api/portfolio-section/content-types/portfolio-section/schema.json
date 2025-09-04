@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "portfolio_sections",
+  "info": {
+    "singularName": "portfolio-section",
+    "pluralName": "portfolio-sections",
+    "displayName": "portfolio-section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "portfolios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::portfolio.portfolio"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_service_comp_service_comps",
+  "info": {
+    "displayName": "service-comp"
+  },
+  "options": {},
+  "attributes": {
+    "tiitle": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}
