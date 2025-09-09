@@ -54,10 +54,10 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['*'], // allowed domains
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+      origin: ['https://yorn-chanpeh-portfolio.vercel.app'],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-      credentials: true,
+      keepHeaderOnError: true,
     },
   },
 ];
