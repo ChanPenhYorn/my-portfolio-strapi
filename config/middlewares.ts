@@ -44,18 +44,7 @@ module.exports = [
       },
     },
   },
-  {
-    name: 'strapi::cors',
-    config: {
-      origin: [
-        'http://localhost:3000',  // For local development
-        'https://yorn-chanpeh-portfolio.vercel.app',  // Your production domain
-    ],
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-      keepHeaderOnError: true  // Ensures CORS headers are sent even on errors (e.g., 403)
-    }
-  },
+  'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
