@@ -54,7 +54,7 @@ module.exports =({env}) => [
   {
     name: 'strapi::cors',
     config: {
-      origin: env('CORS_ORIGIN', 'http://localhost:3000').split(','), // e.g., CORS_ORIGIN=http://localhost:3000,https://yourfrontend.com
+      origin: ['http://localhost:3000', 'https://yorn-chanpenh-portfolio.vercel.app'],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
     },
