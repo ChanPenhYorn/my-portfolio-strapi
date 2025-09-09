@@ -1,4 +1,4 @@
-module.exports = [
+module.exports =({env}) => [
   'strapi::logger',
   'strapi::errors',
   {
@@ -44,6 +44,7 @@ module.exports = [
       },
     },
   },
+
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
@@ -53,10 +54,9 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://yorn-chanpeh-portfolio.vercel.app'],
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
+      origin: env('CORS_ORIGIN', 'http://localhost:3000').split(','), // e.g., CORS_ORIGIN=http://localhost:3000,https://yourfrontend.com
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-      keepHeaderOnError: true,
     },
   },
 ];
