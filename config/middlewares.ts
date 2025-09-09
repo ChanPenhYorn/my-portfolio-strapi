@@ -50,8 +50,7 @@ module.exports = [
       origin: [
         'http://localhost:3000',  // For local development
         'https://yorn-chanpeh-portfolio.vercel.app',  // Your production domain
-     'https://*.vercel.app'  // Wildcard for all Vercel preview subdomains (secure for your use case)
-      ],
+    ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true  // Ensures CORS headers are sent even on errors (e.g., 403)
