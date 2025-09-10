@@ -722,7 +722,7 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     platform: Schema.Attribute.Component<'platform-comp.platform', true> &
