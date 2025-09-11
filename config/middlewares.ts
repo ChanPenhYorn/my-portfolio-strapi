@@ -7,7 +7,7 @@ module.exports = [
       enabled: true,
       origin: ['*'], // allowed domains
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      headers: ['*'],
       keepHeaderOnError: true,
     },
   },
