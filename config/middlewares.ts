@@ -2,6 +2,16 @@ module.exports = [
   'strapi::logger',
   'strapi::errors',
   {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: ['*'], // allowed domains
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      keepHeaderOnError: true,
+    },
+  },
+  {
     name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
@@ -50,12 +60,5 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-  {
-    name: 'strapi::cors',
-    config: {
-      origin: ['*'], // allowed domains
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-    },
-  },
+ 
 ];
