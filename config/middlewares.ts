@@ -44,7 +44,6 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
