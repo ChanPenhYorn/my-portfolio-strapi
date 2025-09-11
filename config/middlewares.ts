@@ -1,14 +1,7 @@
 module.exports = [
   'strapi::logger',
   'strapi::errors',
-   {
-    name: 'strapi::cors',
-    config: {
-      origin: ['*'], // allowed domains
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-    },
-  },
+
   {
     name: 'strapi::security',
     config: {
@@ -18,8 +11,8 @@ module.exports = [
           'connect-src': [
             "'self'",
             'https:',
-            '*',
-
+            'https://yorn-chanpenh-portfolio.vercel.app',
+            'https://yorn-chanpenh-portfolio-*.vercel.app',
           ],
           'img-src': [
             "'self'",
@@ -55,6 +48,22 @@ module.exports = [
           upgradeInsecureRequests: null,
         },
       },
+    },
+  },
+
+    {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: [
+        /^http:\/\/localhost:\d+$/,               // allow all localhost ports
+        /^http:\/\/127\.0\.0\.1:\d+$/,            // allow all 127.0.0.1 ports
+        'https://yorn-chanpenh-portfolio.vercel.app',                 // allow your main domain
+        /^https:\/\/.*yorn-chanpenh-portfolio.*\.vercel\.app$/, // allow Vercel deploy preview URLs
+      ],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      keepHeaderOnError: true,
     },
   },
   'strapi::poweredBy',
