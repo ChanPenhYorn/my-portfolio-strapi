@@ -1,13 +1,13 @@
 module.exports = [
   'strapi::logger',
   'strapi::errors',
-  {
+   {
     name: 'strapi::cors',
     config: {
       enabled: true,
       origin: ['*'], // allowed domains
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      headers: ['*'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
     },
   },
@@ -17,7 +17,12 @@ module.exports = [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
+          'connect-src': [
+            "'self'",
+            'https:',
+            'https://yorn-chanpenh-portfolio.vercel.app',
+            'https://yorn-chanpenh-portfolio-*.vercel.app',
+          ],
           'img-src': [
             "'self'",
             'data:',
