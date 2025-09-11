@@ -80,6 +80,7 @@ export interface TextCompTextComp extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     link: Schema.Attribute.String & Schema.Attribute.Required;
+    role: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
